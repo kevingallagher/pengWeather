@@ -1,0 +1,76 @@
+
+	/*
+	
+	Things to develop:
+	
+		1. Change the background colour so that it's a gradient as per my slides.
+		2. Add stars.
+		3. Add a shooting star, using CSS animation.
+		4. Swap typeface?
+		
+	*/
+	/* Basic body styling. */
+	body {
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	font: 1em "Avenir";
+        overflow-y: hidden;
+	}
+	/* The container that the card is centred inside. */
+	.container {
+	position: fixed !important;
+	position: absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	align-items: center;
+	}
+	
+	/* This is the card. */
+	.card {
+	padding: 10px;
+	width: 470px;
+	height: 200px;
+        margin-top: -245px;
+	background: ;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	
+	-webkit-perspective: 1000; /* NEW */
+	}
+	/* Padding so the type doesn't hit the edge of the card. */
+	
+	p {
+	padding: 10px;
+	}
+	/* The CSS for the fade in. */ 
+	@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+	@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+	@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+	.fade-in {
+	opacity:0;  /* Make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* Call the keyframe named fadeIn, use animattion ease-in and repeat it only 1 time. */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+	-webkit-animation-fill-mode:forwards;  /* This makes sure that after animation is done we remain at the last keyframe value (opacity: 1). */
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
+	}
+    
+.background {width: 100%;
+    height: 100vh;
+    background-image: url(obliqueStratagiesBackground.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    }
